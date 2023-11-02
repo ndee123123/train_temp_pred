@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import numpy as np
 from PIL import Image
-import sklearn
+import skicit-learn
 model = pickle.load(open('model.sav', 'rb'))
 
 st.title('Railway Track Temperature Prediction')
