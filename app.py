@@ -3,9 +3,8 @@ import pickle
 import pandas as pd
 import numpy as np
 from PIL import Image
-import joblib
-model = joblib.load('model.sav')
 
+model = pickle.load(open('model.sav', 'rb'))
 
 st.title('Railway Track Temperature Prediction')
 st.sidebar.header('Railway Track Temperature Data')
