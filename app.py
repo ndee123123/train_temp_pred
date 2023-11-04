@@ -8,15 +8,15 @@ from PIL import Image
 model = pickle.load(open('model.sav', 'rb'))
 
 st.title('Railway Track Temperature Prediction')
-st.sidebar.header('Railway Track Temperature Data')
+st.header('Railway Track Temperature Data')
 image = Image.open('train.jpg')
 st.image(image, '')
 
 # FUNCTION
 def user_report():
-    time = st.sidebar.slider('Time (in seconds)', 0, 3600, 1)
-    Frequency_Kmph = st.sidebar.slider('Speed (in kmph)', 0, 100, 1)  # Set step size to 10
-    Weight_Kg = st.sidebar.slider('Weight (in Kgs)', 0, 500, 1)  # Set step size to 5
+    time = st.slider('Time (in seconds)', 0, 3600, 1)
+    Frequency_Kmph = st.slider('Speed (in kmph)', 0, 100, 1)  # Set step size to 10
+    Weight_Kg = st.slider('Weight (in Kgs)', 0, 500, 1)  # Set step size to 5
 
     user_report_data = {
         'time': time,
