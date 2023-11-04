@@ -14,9 +14,9 @@ st.image(image, '')
 
 # FUNCTION
 def user_report():
-    time = st.sidebar.slider('Time (in seconds)', 0, 500, 5)
-    Frequency_Kmph = st.sidebar.slider('Speed (in kmph)', 0, 500, 0)  # Set step size to 10
-    Weight_Kg = st.sidebar.slider('Weight (in Kgs)', 0, 50, 0)  # Set step size to 5
+    time = st.sidebar.slider('Time (in seconds)', 0, 3600, 1)
+    Frequency_Kmph = st.sidebar.slider('Speed (in kmph)', 0, 100, 1)  # Set step size to 10
+    Weight_Kg = st.sidebar.slider('Weight (in Kgs)', 0, 500, 1)  # Set step size to 5
 
     user_report_data = {
         'time': time,
