@@ -6,8 +6,8 @@ from PIL import Image
 
 model = pickle.load(open('model.sav', 'rb'))
 
-st.title('Railway Track Temperature Prediction')
-st.header('Railway Track Temperature Data')
+st.title('Railway Wheel Contact Temperature Prediction')
+st.header('Railway Wheel Contact Temperature Data')
 image = Image.open('train.jpg')
 st.image(image, '')
 
@@ -34,7 +34,7 @@ temperature = model.predict(user_data)
 # Calculate FBG sensor readings
 fbg_readings = (temperature * 8.85 * 10**-6 * 1538.438) + 1538.438
 
-st.subheader('Railway Track Temperature')
+st.subheader('Railway Wheel Contact Temperature')
 st.subheader(np.round(temperature[0], 2))
 
 st.subheader('FBG Sensor Readings')
