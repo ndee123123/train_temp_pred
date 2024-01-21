@@ -6,7 +6,7 @@ from PIL import Image
 
 model = pickle.load(open('model.sav', 'rb'))
 
-#st.title('Railway Wheel Contact Temperature Prediction')
+st.title('Railway Wheel Contact Temperature Prediction')
 st.header('Railway Wheel Contact Temperature Data')
 image = Image.open('train.jpg')
 st.image(image, '')
